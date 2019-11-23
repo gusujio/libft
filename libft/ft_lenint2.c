@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lenint2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 13:53:33 by gusujio           #+#    #+#             */
-/*   Updated: 2019/10/30 18:20:28 by gusujio          ###   ########.fr       */
+/*   Created: 2019/11/23 15:46:59 by gusujio           #+#    #+#             */
+/*   Updated: 2019/11/23 15:47:01 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int		ft_lenint2(unsigned long long int nb)
 {
-	if (s)
+	unsigned long long int size;
+	
+	size = 0;
+	while (nb >= 10)
 	{
-		while (*s)
-		{
-			ft_putchar(*s);
-			s++;
-		}
+		nb /= 10;
+		++size;
 	}
- }
+	return (size + 1);
+}

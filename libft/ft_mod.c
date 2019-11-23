@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_mod(int n)
+int	ft_mod(long long int n)
 {
 	return (n < 0 ? n * -1 : n);
 }

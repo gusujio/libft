@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 13:53:33 by gusujio           #+#    #+#             */
-/*   Updated: 2019/10/30 18:20:28 by gusujio          ###   ########.fr       */
+/*   Created: 2019/11/23 15:32:00 by gusujio           #+#    #+#             */
+/*   Updated: 2019/11/23 15:32:03 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char *ft_strjoin1(char *s1, char *s2)
 {
-	if (s)
-	{
-		while (*s)
-		{
-			ft_putchar(*s);
-			s++;
-		}
-	}
- }
+	char *ss;
+	
+	ss = ft_strjoin(s1, s2);
+	if (s1)
+		free(s1);
+	return (ss);
+}

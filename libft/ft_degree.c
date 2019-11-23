@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_degree(int x, int n)
+unsigned long long int	ft_degree(unsigned long long int x, unsigned long long int n)
 {
 	if (n == 0)
 		return (1);

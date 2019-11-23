@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strdow.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 13:53:33 by gusujio           #+#    #+#             */
-/*   Updated: 2019/10/30 18:20:28 by gusujio          ###   ########.fr       */
+/*   Created: 2019/11/23 15:36:38 by gusujio           #+#    #+#             */
+/*   Updated: 2019/11/23 15:36:41 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char *ft_strdow(const char *s)
 {
-	if (s)
+	char *s2;
+	int i;
+	
+	s2 = (char*)malloc((i = ft_strlen(s)));
+	s2[i] = 0;
+	while (--i >= 0)
 	{
-		while (*s)
-		{
-			ft_putchar(*s);
-			s++;
-		}
+		s2[i] = s[i];
+		s2[i] = (char)ft_tolower(s2[i]);
 	}
- }
+	return (s2);
+}

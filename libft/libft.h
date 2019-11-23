@@ -6,7 +6,7 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 15:59:08 by gusujio           #+#    #+#             */
-/*   Updated: 2019/10/19 23:34:45 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/10/22 17:28:35 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include <fcntl.h>
-# define BUFF_SIZE 1
 
 typedef struct		s_list
 {
@@ -70,10 +68,18 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char *s1, char *s2);
+char                *ft_strjoin1(char *s1, char *s2);
 char				*ft_strjoin2(char *s1, char *s2);
+char                *ft_strjoin3(char *s1, char *s2);
+char                *ft_strdow(const char *s);
+char                *ft_strup(const char *s);
+size_t              ft_strlen3(const char *s, const char *c);
+int                 ft_lenint(long long int nb);
+int                 ft_lenint2(unsigned long long int nb);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
-char				*ft_itoa(int n);
+char				*ft_itoa(long long int nbr);
+char			    *ft_itoa2(unsigned long long int nbr);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
@@ -90,9 +96,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 size_t				ft_strlen2(const char *s, char c);
 char				**ft_splitt(char const *s, char c, size_t i, size_t l);
-int					ft_degree(int x, int n);
-int					ft_mod(int n);
+unsigned long long int  ft_degree(unsigned long long int x, unsigned long long int n);
+int					ft_mod(long long int n);
 int					ft_root(int x);
-void	            ft_lstadd_up(t_list **alst, t_list *new);
-int                 get_next_line(const int fd, char **line);
 #endif

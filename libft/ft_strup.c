@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strup.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/13 13:53:33 by gusujio           #+#    #+#             */
-/*   Updated: 2019/10/30 18:20:28 by gusujio          ###   ########.fr       */
+/*   Created: 2019/11/23 15:36:24 by gusujio           #+#    #+#             */
+/*   Updated: 2019/11/23 15:36:26 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char *ft_strup(const char *s)
 {
-	if (s)
+	char *s2;
+	int i;
+	
+	s2 = (char*)malloc((i =  ft_strlen(s)));
+	s2[i] = 0;
+	while (--i >= 0)
 	{
-		while (*s)
-		{
-			ft_putchar(*s);
-			s++;
-		}
+		s2[i] = s[i];
+		s2[i] = (char)ft_toupper(s2[i]);
 	}
- }
+	return (s2);
+}
