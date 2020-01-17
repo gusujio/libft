@@ -6,23 +6,20 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 19:40:09 by gusujio           #+#    #+#             */
-/*   Updated: 2019/09/14 19:40:19 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:58:33 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_itoa(long long int nbr)
+char	*ft_itoa(long long int nbr)
 {
 	char			*str;
-	long long int 	nb;
+	long long int	nb;
 	long long int	index;
 	long long int	size;
 
-	if (nbr < 0)
-		nb = (nbr * -1);
-	else
-		nb = nbr;
+	nb = nbr < 0 ? nbr * -1 : nbr;
 	if (nbr == -9223372036854775807 - 1)
 		return (ft_strdup("-9223372036854775808"));
 	size = ft_lenint(nb);

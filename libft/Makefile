@@ -6,7 +6,7 @@
 #    By: gusujio <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/09 14:47:13 by gusujio           #+#    #+#              #
-#    Updated: 2019/10/22 15:27:37 by gusujio          ###   ########.fr        #
+#    Updated: 2019/12/01 15:10:57 by gusujio          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC =\
 	ft_strncmp.c\
 	ft_strtrim.c\
 	ft_itoa.c\
+	ft_itoa2.c\
 	ft_memchr.c\
 	ft_putendl.c\
 	ft_strchr.c\
@@ -75,7 +76,32 @@ SRC =\
 	ft_splitt.c\
 	ft_striter.c\
 	ft_strncat.c\
-	ft_strsub.c
+	ft_strsub.c\
+	bonus.c\
+	ft_mult2.c\
+	ft_multi.c\
+	ft_printf.c\
+	ft_revers.c\
+	obr.c\
+	obr2.c\
+	obr3.c\
+	tip_f.c\
+	tip_ff.c\
+	tip_i_d.c\
+	tip_o.c\
+	tip_p.c\
+	tip_s_c.c\
+	tip_u.c\
+	tip_x.c\
+	ft_lenint.c\
+	ft_lenint2.c\
+	ft_strjoin1.c\
+	ft_strjoin3.c\
+	ft_strlen3.c\
+	get_next_line.c\
+	ft_strcount.c\
+	ft_atoiar.c
+
 OBJ = $(subst .c,.o,$(SRC))
 
 NAME = libft.a
@@ -85,6 +111,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
 $(OBJ): %.o: %.c
 	gcc -o $@ -c $<
 clean:

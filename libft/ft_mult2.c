@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdow.c                                        :+:      :+:    :+:   */
+/*   ft_mult2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/23 15:36:38 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/26 16:53:17 by gusujio          ###   ########.fr       */
+/*   Created: 2019/11/25 20:13:07 by gusujio           #+#    #+#             */
+/*   Updated: 2019/11/26 15:45:53 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdow(const char *s)
+char	*del10(char *s, int k)
 {
+	int		len;
 	char	*s2;
 	int		i;
 
-	i = ft_strlen(s);
-	s2 = (char*)malloc(i);
-	s2[i] = 0;
-	while (--i >= 0)
+	if (k >= (len = ft_strlen(s)))
 	{
-		s2[i] = s[i];
-		s2[i] = (char)ft_tolower(s2[i]);
+		k = k - len + 2;
+		s2 = ft_memset(ft_strnew(k), '0', k);
+		s2[1] = '.';
+		return (ft_strjoin3(s2, s));
 	}
+	s2 = ft_strnew(len + 1);
+	k = len - k - 1;
+	i = 1;
+	while (--len >= 0)
+	{
+		if (len == k)
+		{
+			s2[len + i] = '.';
+			i = 0;
+		}
+		s2[len + i] = s[len];
+	}
+	ft_strdel(&s);
 	return (s2);
 }

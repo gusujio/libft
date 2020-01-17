@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdow.c                                        :+:      :+:    :+:   */
+/*   ft_strcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/23 15:36:38 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/26 16:53:17 by gusujio          ###   ########.fr       */
+/*   Created: 2019/12/01 17:28:19 by gusujio           #+#    #+#             */
+/*   Updated: 2019/12/01 17:28:22 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdow(const char *s)
+int ft_strcount(char *s1, char *s2) // колическтво s2 в s1
 {
-	char	*s2;
-	int		i;
+	int         i;
+	long int    j;
+	char        *s3;
 
-	i = ft_strlen(s);
-	s2 = (char*)malloc(i);
-	s2[i] = 0;
-	while (--i >= 0)
+	i = 0;
+	j = 0;
+	while (s1[j])
 	{
-		s2[i] = s[i];
-		s2[i] = (char)ft_tolower(s2[i]);
+		if ((s3 = ft_strstr(&s1[j], s2)))
+		{
+			j = s3 - (s1 + j);
+			s1 = s3;
+			i++;
+		}
+		j++;
 	}
-	return (s2);
+	return (i);
 }

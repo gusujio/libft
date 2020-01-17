@@ -6,16 +6,16 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 15:44:44 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/23 15:44:46 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/12/01 16:12:19 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int      ft_lenint(long long int nb)
+int		ft_lenint(long long int nb)
 {
 	long long int	size;
-	
+
 	size = 0;
 	while (nb >= 10)
 	{

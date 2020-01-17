@@ -6,20 +6,18 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 15:32:13 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/23 15:32:16 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:51:33 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin3(char *s1, char *s2)
+char	*ft_strjoin3(char *s1, char *s2)
 {
 	char *ss;
-	
+
 	ss = ft_strjoin(s1, s2);
-	if (s1)
-		free(s1);
-	if (s2)
-		free(s2);
+	ft_strdel(&s1);
+	ft_strdel(&s2);
 	return (ss);
 }

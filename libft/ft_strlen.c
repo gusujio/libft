@@ -6,11 +6,11 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:56:03 by gusujio           #+#    #+#             */
-/*   Updated: 2019/09/30 21:53:35 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:50:48 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -19,8 +19,8 @@ size_t	ft_strlen(const char *s)
 	i = 0;
 	if (s)
 	{
-        while (s[i] != '\0')
-            i++;
-    }
+		while (s[i] != '\0')
+			i++;
+	}
 	return (i);
 }

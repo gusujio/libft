@@ -6,7 +6,7 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/20 17:09:34 by gusujio           #+#    #+#             */
-/*   Updated: 2019/09/24 18:42:39 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:51:48 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 char	*ft_strjoin2(char *s1, char *s2)
 {
 	char *ss;
-	
-	ss = ft_strjoin(s1,s2);
-	if (s2)
-		free(s2);
+
+	ss = ft_strjoin(s1, s2);
+	ft_strdel(&s2);
 	return (ss);
 }

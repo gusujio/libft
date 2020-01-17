@@ -6,11 +6,12 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/30 17:38:41 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/07 14:39:01 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/18 22:50:35 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
 int	get_next_line(const int fd, char **line)
 {

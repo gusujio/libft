@@ -6,7 +6,7 @@
 /*   By: gusujio <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 15:40:04 by gusujio           #+#    #+#             */
-/*   Updated: 2019/11/23 15:40:11 by gusujio          ###   ########.fr       */
+/*   Updated: 2019/11/26 16:50:12 by gusujio          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlen3(const char *s, const char *c)
 {
 	size_t i;
 	size_t j;
-	
+
 	i = 0;
 	while (s[i] != 0)
 	{
